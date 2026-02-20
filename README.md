@@ -51,6 +51,9 @@ Open `http://localhost:3000` to:
 - Create/list/delete tasks
 - See API error/success messages
 
+Demo screenshot:
+- https://github.com/user-attachments/assets/c5a9e18b-bb15-404d-a15e-ee7a0f5cccf7
+
 ## Build & Test
 ```bash
 npm run build
