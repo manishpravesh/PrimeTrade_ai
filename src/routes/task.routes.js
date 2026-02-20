@@ -19,7 +19,10 @@ router.get('/', async (req, res, next) => {
 
 router.post(
   '/',
-  [body('title').trim().isLength({ min: 1, max: 140 }), body('description').optional().trim().isLength({ max: 500 })],
+  [
+    body('title').trim().isLength({ min: 1, max: 140 }),
+    body('description').optional().trim().isLength({ max: 500 })
+  ],
   validate,
   async (req, res, next) => {
     try {
@@ -38,7 +41,12 @@ router.post(
 
 router.put(
   '/:id',
-  [param('id').trim().notEmpty(), body('title').optional().trim().isLength({ min: 1, max: 140 }), body('description').optional().trim().isLength({ max: 500 }), body('completed').optional().isBoolean()],
+  [
+    param('id').trim().notEmpty(),
+    body('title').optional().trim().isLength({ min: 1, max: 140 }),
+    body('description').optional().trim().isLength({ max: 500 }),
+    body('completed').optional().isBoolean()
+  ],
   validate,
   async (req, res, next) => {
     try {
